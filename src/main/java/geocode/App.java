@@ -14,7 +14,6 @@ public class App
     	String ip=scanner.nextLine();
         String location=iPdata.getIpData(ip);
         JSONObject obj=new JSONObject(location);
-        System.out.println(location);
         String city=obj.getString("city");
         String country=obj.getString("country");
         String postal=obj.getString("postal");

@@ -5,7 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class IPdata {
 	public String getIpData(String ip) {
@@ -14,7 +15,7 @@ public class IPdata {
 		String link = "https://ipinfo.io/" + ip + "/json";
 		try {
 			url = new URL(link);
-			URLConnection con = url.openConnection();
+			HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
 			BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			String tmp;
 			while ((tmp=br.readLine()) != null) {
