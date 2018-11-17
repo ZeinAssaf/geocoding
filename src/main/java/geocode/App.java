@@ -21,6 +21,7 @@ public class App
         System.out.println("the city is"+" "+city);
         System.out.println("the countery is"+" "+country);
         System.out.println("the postal code is"+" "+postal);
+        scanner.close();
         
     }
     
